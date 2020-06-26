@@ -1,7 +1,15 @@
 @extends('layouts.app')
 @section('content')
+<style>
+    .form-signin {
+    width: 100%;
+    max-width: 430px;
+    padding: 15px;
+    margin: auto;
+    }
+    </style>
 <h1>Editar una empresa</h1>
-<form action="{{ route('empresas.update',['empresa'=> $empresa->id])}}" method="post">
+<form action="{{ route('empresas.update',['empresa'=> $empresa->id])}}"class="form-signin" method="post">
     @csrf
     @method('PUT')
     <div class="form-row">
@@ -29,3 +37,4 @@
     </div>
     </form>
     @endsection
+    

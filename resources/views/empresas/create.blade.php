@@ -1,7 +1,15 @@
 @extends('layouts.app')
 @section('content')
+<style>
+    .form-signin {
+    width: 100%;
+    max-width: 430px;
+    padding: 15px;
+    margin: auto;
+    }
+    </style>
 <h1>Crear una empresa</h1>
-<form action="{{ route('empresas.store') }}" method="post">
+<form action="{{ route('empresas.store') }}" class="form-signin" method="post">
     @csrf
     <div class="form-row">
         <label>Nombre</label>
