@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <h1>Crear una empresa</h1>
 <form action="{{ route('empresas.store') }}" method="post">
     @csrf
@@ -25,3 +27,4 @@
         <button type="submit" class="btn btn-primary btn-lg mt-3">CREAR EMPRESA</button>
     </div>
     </form>
+    @endsection

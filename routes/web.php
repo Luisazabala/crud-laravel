@@ -34,3 +34,7 @@ Route::match(['put', 'patch'],'empresa/{empresa}/editar', 'ControladorEmpresa@up
 )->name('empresas.update');
 
 Route::delete('empresa/{empresa}', 'ControladorEmpresa@delete')->name('empresas.delete');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

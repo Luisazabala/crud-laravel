@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <h1>Editar una empresa</h1>
 <form action="{{ route('empresas.update',['empresa'=> $empresa->id])}}" method="post">
     @csrf
@@ -26,3 +28,4 @@
         <button type="submit" class="btn btn-primary btn-lg mt-3">ACTUALIZAR EMPRESA</button>
     </div>
     </form>
+    @endsection
