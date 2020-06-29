@@ -8,31 +8,34 @@
     margin: auto;
     }
     </style>
-<h1>Crear una empresa</h1>
+
 <form action="{{ route('empresas.store') }}" class="form-signin" method="post">
+<div class="card-header">
+<h1 align="center"><b>CREAR EMPRESA<b></h1></div>
     @csrf
-    <div class="form-row">
-        <label>Nombre</label>
+    <div class="card text-white bg-secondary mb-3" style="align:center">
+    <div class="col-md-12 mb-12" align="center" >
+        <label >Nombre</label>
     <input class="form-control" type="text" name="Nombre" value="{{ old('Nombre') }}" required>
-    </div>
-    <div class="form-row">
-        <label>Direccion</label>
+    
+        <label>Dirección</label>
     <input class="form-control" type="text" name="Direccion" value="{{ old('Direccion') }}" required>
-    </div>
-    <div class="form-row">
+   
         <label>Nombre Representante</label>
     <input class="form-control" type="text" name="NombreRepresentante"  value="{{ old('NombreRepresentante') }}" required>
-    </div>
-    <div class="form-row">
+
         <label>NIT</label>
     <input class="form-control" type="text" name="NIT" value="{{ old('NIT') }}" required>
-    </div>
-    <div class="form-row">
+   
         <label>Celular</label>
     <input class="form-control" type="text" name="Celular" value="{{ old('Celular') }}" required>
+   
+    <br>
+    </div>
     </div>
     <div class="form-row">
-        <button type="submit" class="btn btn-primary btn-lg mt-3">CREAR EMPRESA</button>
+        <button type="submit" class="btn btn-danger btn-lg btn-block">CREAR EMPRESA</button>
+        <a class="btn btn-secondary btn-lg btn-block" href="{{route('empresas.index')}}">VOLVER</a>
     </div>
     </form>
     @endsection

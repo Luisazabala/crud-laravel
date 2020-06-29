@@ -4,8 +4,6 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,12 +11,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    You are logged in!
                 </div>
-            </div>
-            <div class="form-row">
-                <a class="btn btn-success mb-3" href="{{route('empresas.index')}}">Ir a </a>
-            </div>
+               <h1 align="center">BIENVENIDO</h1>
+               <br>
+               <div align="center">
+               <img src="/images/kreemo.png" style="width:230px; height:230px">
+               </div>
+               <br>
+                <a class="btn btn-danger btn-lg btn-block" href="{{route('empresas.index')}}">LISTADO DE EMPRESAS</a>
+                <a class="btn btn-secondary btn-lg btn-block" href="{{route('empresas.create')}}">CREAR EMPRESA</a>
+           
+           
         </div>
     </div>
 </div>

@@ -5,19 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar</title>
+    <title>index</title>
 </head>
 <body>
-    <h1 align="center">Listado de empresas</h1>
-    <a class="btn btn-success mb-3" href="{{route('empresas.create')}}">CREAR EMPRESA</a>
+  
+    <h1 align="center"><b>LISTADO DE EMPRESAS</b></h1>
+    <a class="btn btn-danger btn-lg btn-block" href="{{route('empresas.create')}}">CREAR EMPRESA</a>
+    <a class="btn btn-secondary btn-lg btn-block" href="{{route('home')}}">VOLVER</a>
+    <br>
     @if(empty($empresas))
     <div class="alert alert-warning">
         La lista de empresas esta vacìa
     </div>
     @else 
-        <div class="class-responsive">
-         <table class="table table-striped">
-            <thead class="thead-light">
+        <div class="class-responsive" >
+         <table class="table table-striped" >
+            <thead class="thead-light" align="center">
             <tr>
             <th>ID</th>
             <th>Nombre</th>
@@ -28,7 +31,7 @@
             <th>Accion</th> 
             </tr>
             </thead>
-            <tbody>
+            <tbody align="center">
             @foreach($empresas as $empresa)
                     <tr>
                     <td>{{$empresa->id}}</td>
