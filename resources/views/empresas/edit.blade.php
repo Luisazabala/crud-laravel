@@ -26,7 +26,7 @@
     <input class="form-control" type="text" name="NombreRepresentante"  value="{{$empresa->NombreRepresentante}}" required>
     
         <label>NIT</label>
-    <input class="form-control" type="text" name="NIT" value="{{ $empresa->NIT}}" required>
+    <input class="form-control" type="text" readonly name="NIT" value="{{ $empresa->NIT}}" required>
    
         <label>Celular</label>
     <input class="form-control" type="text" name="Celular" value="{{ $empresa->Celular}}" required>
