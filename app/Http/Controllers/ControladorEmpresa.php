@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Empresa;
-
+use App\Http\Request\EmpresaStoreRequest;
+use App\Http\Request\EmpresaUpdateRequest;
 class ControladorEmpresa extends Controller
 {
     
